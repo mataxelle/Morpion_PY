@@ -10,10 +10,12 @@ print(board)
 player =  "X"
 
 def board_render():
+    print(" ---+---+--- ")
     for i in range(9):
-        print(board[i], end=" ")
+        print("|", board[i], end=" ")
         if i % 3 == 2:
-            print("")
+            print("|")
+            print(" ---+---+--- ")
 
 while True:
     player_choice = 0
