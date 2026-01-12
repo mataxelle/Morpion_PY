@@ -7,15 +7,15 @@ for i in range(9):
     board.append(" ")
 print(board)
 """
-gamer =  "X"
+player =  "X"
 
 while True:
-    gamer_choice = 0
+    player_choice = 0
 
-    while gamer_choice < 1 or gamer_choice > 9 or board[gamer_choice - 1] != empty_box:
-      gamer_choice = int(input("Enter a box between 1 and 9 : "))
+    while player_choice < 1 or player_choice > 9 or board[player_choice - 1] != empty_box:
+      player_choice = int(input("Enter a box between 1 and 9 : "))
 
-    board[gamer_choice - 1] = gamer
+    board[player_choice - 1] = player
 
     for i in range(9):
         print(board[i], end=" ")
@@ -30,14 +30,14 @@ while True:
     or empty_box != board[2] == board[5] == board[8] \
     or empty_box != board[0] == board[4] == board[8] \
     or empty_box != board[2] == board[4] == board[6] :
-        print("Gamer", gamer, "is the winner !")
+        print("Player", player, "is the winner !")
         break
 
-    gamer = "O" if gamer == "X" else "X"
+    player = "O" if player == "X" else "X"
 
     """
-    if gamer == "X":
-       gamer = "O"
+    if player == "X":
+       player = "O"
     else:
-        gamer = "X"
+        player = "X"
     """
