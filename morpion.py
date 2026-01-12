@@ -9,18 +9,20 @@ print(board)
 """
 player =  "X"
 
+def board_render():
+    for i in range(9):
+        print(board[i], end=" ")
+        if i % 3 == 2:
+            print("")
+
 while True:
     player_choice = 0
+    board_render()
 
     while player_choice < 1 or player_choice > 9 or board[player_choice - 1] != empty_box:
       player_choice = int(input("Enter a box between 1 and 9 : "))
 
     board[player_choice - 1] = player
-
-    for i in range(9):
-        print(board[i], end=" ")
-        if i % 3 == 2:
-            print("")
 
     if empty_box != board[0] == board[1] == board[2] \
     or empty_box != board[3] == board[4] == board[5] \
@@ -31,6 +33,7 @@ while True:
     or empty_box != board[0] == board[4] == board[8] \
     or empty_box != board[2] == board[4] == board[6] :
         print("Player", player, "is the winner !")
+        board_render()
         break
 
     player = "O" if player == "X" else "X"
