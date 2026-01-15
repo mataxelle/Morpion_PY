@@ -39,7 +39,7 @@ while True:
         restart = input("Do you want to play again ? (y/n)")
         if restart == "y" or restart == "Y":
             board = [empty_box for i in range(9)]
-            #player = "X"
+            player = "X"
             continue
         else:
             break
