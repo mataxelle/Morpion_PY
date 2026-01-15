@@ -36,7 +36,13 @@ while True:
     or empty_box != board[2] == board[4] == board[6] :
         print("Player", player, "is the winner !")
         board_render()
-        break
+        restart = input("Do you want to play again ? (y/n)")
+        if restart == "y" or restart == "Y":
+            board = [empty_box for i in range(9)]
+            #player = "X"
+            continue
+        else:
+            break
 
     player = "O" if player == "X" else "X"
 
