@@ -44,6 +44,17 @@ while True:
         else:
             break
 
+    if empty_box not in board:
+        print("It's a draw!")
+        board_render()
+        restart = input("Do you want to play again ? (y/n)")
+        if restart == "y" or restart == "Y":
+            board = [empty_box for i in range(9)]
+            player = "X"
+            continue
+        else:
+            break
+
     player = "O" if player == "X" else "X"
 
     """
